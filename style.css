@@ -5,3 +5,67 @@
     display: flex;
     justify-content: center;
 }
+
+.jobtitle {
+    font-family: 'Handjet', cursive;
+    font-size: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.setting {
+    font-family: 'Handjet', cursive;
+    font-size: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.item1worklogo {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.job1 {
+    grid-row-start: 2
+}
+
+.joblogos {
+    height: 100px;
+    width: 150px;
+}
+
+.roundededges {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding: 0 2em;
+  }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+.left-justified {
+    display: block;
+    margin-left: 0%;
+
+}
+
+p {
+    font-family: 'Handjet', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 50%;
+    padding: 2%;
+}
+
+.card {
+    font-family: 'Handjet', cursive;
+    font-size: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 5em;
+}
