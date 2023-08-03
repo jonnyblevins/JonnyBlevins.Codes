@@ -1,24 +1,70 @@
 
 .title {
     font-family: 'Handjet', cursive;
-    font-size: 5em;
-    display: flex;
+    font-size: 40px;
+    display: grid;
     justify-content: center;
 }
 
-.jobtitle {
+p {
     font-family: 'Handjet', cursive;
-    font-size: 20%;
     display: flex;
     justify-content: center;
+    font-size: 25px;
     padding: 2%;
 }
 
-.setting {
+.hidden {
+   opacity: 0;
+   filter: blur(5px);
+   transform: translateX(-100%);
+   transition: all 1s;
+}
+/* If nobody wants to see my stupid animation, see below. */
+@media(prefers-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+}
+
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.jobsection {
+    display: grid;
+    font-size: 20px;
+    grid-template-columns: 25% 25% 25% 25% 25%;
+  }
+
+.jobs {
     font-family: 'Handjet', cursive;
-    font-size: 20%;
-    display: flex;
-    justify-content: center;
+    padding: 0 25%;
+    display: grid;
+    align-content: center;
+    min-height: 100vh;
+}
+
+.jobs:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.jobs:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.jobs:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.jobs:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.jobs:nth-child(6) {
+    transition-delay: 1000ms;
 }
 
 .item1worklogo {
@@ -26,39 +72,21 @@
     grid-column-end: 4;
 }
 
-.job1 {
-    grid-row-start: 2
-}
-
 .joblogos {
     height: 100px;
     width: 150px;
-    padding: -1%;
+    padding: 5%;
 }
-
-.roundededges {
-    height: 200px;
-    width: 200px;
-    border-radius: 0 25%;
-    padding: 0 2em;
-  }
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
-
   }
 
-.left-justified {
-    display: block;
-    margin-left: 0%;
-}
-
-p {
-    font-family: 'Handjet', cursive;
-    display: flex;
-    justify-content: center;
-    font-size: 25%;
-    padding: 2%;
-}
+  .roundededges {
+    height: 200px;
+    width: 200px;
+    border-radius: 0 25%;
+    padding: 0 2em;
+  }
