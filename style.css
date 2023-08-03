@@ -35,8 +35,8 @@ p {
 
 .jobsection {
     display: grid;
-    font-size: 20px;
-    grid-template-columns: 25% 25% 25% 25% 25%;
+    font-size: 23px;
+    grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
 .jobs {
@@ -44,7 +44,6 @@ p {
     padding: 0 25%;
     display: grid;
     align-content: center;
-    min-height: 100vh;
 }
 
 .jobs:nth-child(2) {
