@@ -1,12 +1,27 @@
 
+body {
+    background-color: black;
+    color: white;
+    font-size: 40px;
+}
+
+
 .title {
     font-family: 'Handjet', cursive;
-    font-size: 40px;
-    display: grid;
+    font-size: 100px;
+    display: flex;
     justify-content: center;
 }
 
 p {
+    font-family: 'Handjet', cursive;
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 2%;
+}
+
+.smallertext {
     font-family: 'Handjet', cursive;
     display: flex;
     justify-content: center;
@@ -17,31 +32,31 @@ p {
 .hidden {
    opacity: 0;
    filter: blur(5px);
-   transform: translateX(-100%);
-   transition: all 1s;
+   transform: translateX(-50%);
+   transition: all 2s;
 }
-/* If nobody wants to see my stupid animation, see below. */
 @media(prefers-reduced-motion) {
-    .hidden{
+    .show{
         transition: none;
     }
 }
 
-
 .show {
     opacity: 1;
     filter: blur(0);
+    transform: translateX(0);
 }
 
 .jobsection {
     display: grid;
     font-size: 23px;
+    font: white;
     grid-template-columns: 20% 20% 20% 20% 20%;
   }
 
 .jobs {
     font-family: 'Handjet', cursive;
-    padding: 0 25%;
+    padding: 0 5%;
     display: grid;
     align-content: center;
 }
@@ -66,24 +81,105 @@ p {
     transition-delay: 1000ms;
 }
 
-.item1worklogo {
-    grid-column-start: 1;
-    grid-column-end: 4;
-}
-
 .joblogos {
     height: 100px;
     width: 150px;
     padding: 5%;
 }
 
-.center {
+
+.roundededges {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    padding: 0 2em;
+  }
+
+.jobedges {
+    height: 200px;
+    width: 200px;
+    border-radius: 0 25%;
+    padding: 0 2em;
+  }
+
+
+.social-icon {
+    size: 50px;
+    color:grey;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    height: 200px;
+    width: 200px;
+    transition: color 0.4s;
+}
+
+.social-icon:hover {
+    color:rgb(73, 101, 129);
+}
+
+/* unvisited link */
+a:link {
+    color: grey;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: rgb(57, 57, 170);
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(76, 106, 114);
+    transition: color 0.6s;
+  }
+  
+  /* selected link */
+  a:active {
+    color: rgb(117, 39, 126);
   }
 
-  .roundededges {
+.schoolsection {
+    display: grid;
+    font-size: 23px;
+    font: white;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+
+.schools {
+    font-family: 'Handjet', cursive;
+    padding: 0 5%;
+    display: grid;
+    align-content: center;
+}
+
+.schools:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.schools:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.schools:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.schools:nth-child(5) {
+    transition-delay: 800ms;
+}
+
+.schools:nth-child(6) {
+    transition-delay: 1000ms;
+}
+
+.schoollogos {
+    height: 100px;
+    width: 150px;
+    padding: 5%;
+}
+
+.schooledges {
     height: 200px;
     width: 200px;
     border-radius: 0 25%;
