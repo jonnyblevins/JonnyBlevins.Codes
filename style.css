@@ -56,14 +56,15 @@ p {
     display: grid;
     font-size: 23px;
     font: white;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 50% 50%;
   }
 
 .jobs {
     font-family: 'Handjet', cursive;
     padding: 0 5%;
     display: grid;
-    align-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
 }
 
 .jobs:nth-child(2) {
