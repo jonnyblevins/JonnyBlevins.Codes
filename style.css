@@ -5,7 +5,12 @@ body {
     font-size: 40px;
 }
 
-
+.twoblocks {
+    display: grid;
+    grid-template-columns: 50% 50%; /* Adjust column width as needed */
+    gap: 20px; /* Adjust the gap between grid items */
+}
+      
 .title {
     font-family: 'Handjet', cursive;
     font-size: 100px;
@@ -89,8 +94,8 @@ p {
 
 
 .roundededges {
-    height: 400px;
-    width: 400px;
+    height: 20%;
+    width: 25%;
     border-radius: 50%;
     padding: 0 2em;
   }
