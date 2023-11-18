@@ -1,47 +1,40 @@
-
 body {
-    background-color: black;
-    color: white;
-    font-size: 40px;
+    background-color: #121212;
+    color: #E0E0E0;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.twoblocks {
-    display: grid;
-    grid-template-columns: 50% 50%; /* Adjust column width as needed */
-    gap: 20px; /* Adjust the gap between grid items */
+header, .title {
+    text-align: center;
+    font-family: 'Handjet', cursive;
 }
-      
+
 .title {
-    font-family: 'Handjet', cursive;
-    font-size: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-p {
-    font-family: 'Handjet', cursive;
-    display: flex;
-    justify-content: center;
     font-size: 40px;
-    padding: 2%;
+    color: #64B5F6;
 }
 
-.smallertext {
-    font-family: 'Handjet', cursive;
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
+p, .smallertext {
+    font-size: 16px;
+    text-align: center;
     padding: 2%;
+    font-family: 'Handjet', cursive;
 }
 
 .hidden {
-   opacity: 0;
-   filter: blur(5px);
-   transform: translateX(-50%);
-   transition: all 2s;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-50%);
+    transition: all 2s;
 }
+
 @media(prefers-reduced-motion) {
-    .show{
+    .show {
         transition: none;
     }
 }
@@ -52,142 +45,87 @@ p {
     transform: translateX(0);
 }
 
-.jobsection {
-    display: grid;
-    font-size: 23px;
-    font: white;
-    grid-template-columns: 50% 50%;
-  }
-
-.jobs {
+.jobsection, .schoolsection, .jobs, .schools {
     font-family: 'Handjet', cursive;
-    padding: 0 5%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
 }
 
-.jobs:nth-child(2) {
-    transition-delay: 200ms;
+.jobs img, .schools img {
+    height: 120px;
+    width: 120px;
+    padding: 2%;
+    border-radius: 15%;
+    object-fit: contain; 
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
 }
 
-.jobs:nth-child(3) {
-    transition-delay: 400ms;
+.roundededges, .jobedges, .schooledges {
+    height: 15%;
+    width: 15%;
+    border-radius: 10%;
+    padding: 1em;
+    overflow: hidden;
 }
-
-.jobs:nth-child(4) {
-    transition-delay: 600ms;
-}
-
-.jobs:nth-child(5) {
-    transition-delay: 800ms;
-}
-
-.jobs:nth-child(6) {
-    transition-delay: 1000ms;
-}
-
-.joblogos {
-    height: 100px;
-    width: 150px;
-    padding: 5%;
-}
-
-
-.roundededges {
-    height: 20%;
-    width: 25%;
-    border-radius: 50%;
-    padding: 0 2em;
-  }
-
-.jobedges {
-    height: 200px;
-    width: 200px;
-    border-radius: 0 25%;
-    padding: 0 2em;
-  }
-
 
 .social-icon {
-    size: 50px;
-    color:grey;
+    size: 20px;
+    color: #FFD54F;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 200px;
-    width: 200px;
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
     transition: color 0.4s;
 }
 
 .social-icon:hover {
-    color:rgb(73, 101, 129);
+    color: #81C784;
 }
 
-/* unvisited link */
-a:link {
-    color: grey;
-  }
-  
-  /* visited link */
-  a:visited {
-    color: rgb(57, 57, 170);
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: rgb(76, 106, 114);
+a {
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #81D4FA;
+}
+
+a:hover {
+    color: #FF8A65;
     transition: color 0.6s;
-  }
-  
-  /* selected link */
-  a:active {
-    color: rgb(117, 39, 126);
-  }
-
-.schoolsection {
-    display: grid;
-    font-size: 23px;
-    font: white;
-    grid-template-columns: 25% 25% 25% 25%;
-  }
-
-.schools {
-    font-family: 'Handjet', cursive;
-    padding: 0 5%;
-    display: grid;
-    align-content: center;
 }
 
-.schools:nth-child(2) {
-    transition-delay: 200ms;
+a:active {
+    color: #BA68C8;
 }
 
-.schools:nth-child(3) {
-    transition-delay: 400ms;
-}
+@media (min-width: 768px) {
+    .title {
+        font-size: 60px;
+    }
 
-.schools:nth-child(4) {
-    transition-delay: 600ms;
-}
+    p, .smallertext {
+        font-size: 18px;
+    }
 
-.schools:nth-child(5) {
-    transition-delay: 800ms;
-}
+    .jobs img, .schools img {
+        height: 150px;
+        width: 150px;
+    }
 
-.schools:nth-child(6) {
-    transition-delay: 1000ms;
-}
+    .roundededges, .jobedges, .schooledges {
+        height: 18%;
+        width: 18%;
+    }
 
-.schoollogos {
-    height: 100px;
-    width: 150px;
-    padding: 5%;
+    .social-icon {
+        size: 30px;
+        height: 60px;
+        width: 60px;
+    }
 }
-
-.schooledges {
-    height: 200px;
-    width: 200px;
-    border-radius: 0 25%;
-    padding: 0 2em;
-  }
