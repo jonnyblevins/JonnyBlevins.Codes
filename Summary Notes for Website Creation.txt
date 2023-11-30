@@ -1,0 +1,18 @@
+Summary on my personal website:
+
+Structure:
+HTML (Structure Markup): The website's structure is defined using HTML, organizing content into sections such as headers, paragraphs, links, and images.
+Styling:
+CSS (Cascading Style Sheets): Styling is applied using CSS to control the visual presentation, including colors, fonts, layout, responsiveness, and transitions/animations.
+Functionality:
+JavaScript:
+IntersectionObserver: Utilized to trigger content visibility as the user scrolls through the site. This feature provides a smooth and interactive experience, revealing content gradually
+Event Handling: JavaScript handles events such as clicks on social links or interacting with elements on the page.
+
+Content Overview:
+Responsive Design:
+Media Queries: CSS includes media queries to make sure the website layout and styling adapt to different screen sizes, and that enhances the site's responsiveness and usability. In other words I built what I thought was a beautiful website and realized it looked like trash on a phone and had to redesign it from the ground up.
+Ionicons: External library for icons (loaded via CDN), which might count as an external dependency.
+The only element of prefetching I've used is loading the resume PDF, to enhance user experience by reducing latency when accessing external content.
+
+This technical overview showcases the website's use of HTML for content structure, CSS for styling, JavaScript for interactivity and animations, and the integration of external resources to enhance the user experience. The site employs modern web development techniques to create an engaging and dynamic presentation of Jonny Blevins' professional profile and creative work.
