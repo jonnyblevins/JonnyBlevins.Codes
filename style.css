@@ -95,22 +95,20 @@ a:active {
     }
 }
 
-/* Container for the flip effect */
+
 .image-container {
-    width: 400px; /* Adjusted width */
-    height: 400px; /* Adjusted height */
+    width: 400px; 
+    height: 400px;
     perspective: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Fixed positioning to stay on screen */
-    top: 50%; /* Vertically centered */
-    left: 20px; /* Positioned on the left side */
-    transform: translateY(-50%); /* Ensures it stays centered vertically */
-    z-index: 100; /* Keeps it on top */
-}
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 100;
 
-/* The flip card */
 .flip-card {
     width: 100%;
     height: 100%;
@@ -119,7 +117,6 @@ a:active {
     transition: transform 1s ease;
 }
 
-/* The actual flip effect */
 .flip-card-inner {
     position: absolute;
     width: 100%;
@@ -128,7 +125,6 @@ a:active {
     transition: transform 1s ease;
 }
 
-/* Front and back of the card */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -151,7 +147,6 @@ a:active {
     transform: rotateY(180deg);
 }
 
-/* Styling for the images */
 img {
     max-width: 100%;
     height: auto;
@@ -159,4 +154,5 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
 }
