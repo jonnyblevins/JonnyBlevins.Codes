@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonny Blevins . Codes</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@600&display=swap');</style>
+    <title>Jonny Blevins</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" nomodule></script>
 </head>
 
 <body>
-
     <header>
-        <h1 class="hidden title twoblocks">Jonny Blevins</h1>
+        <h1 class="hidden title">Jonny Blevins</h1>
+        <div class="image-container">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/PersonalPortrait.png" alt="Personal Portrait">
+                    </div>
+                    <div class="flip-card-back">
+                        <img src="images/PersonalDrawing.png" alt="Personal Drawing">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>WV-born project professional. <br><br> Creative consensus builder. <br><br> Data-driven mind.<br><br></p>
+    
     </header>
-    <div>
-        <p> <img class="roundededges twoblocks" src="images/PersonalPortrait.png" alt="Personal Portrait of Self as Wizard">
-        <br>
-        WV-born project professional, teacher, and creative mind.  <br> <br>
-        I have a passion for helping people visualize data. <br> <br>
-        My favorite spaces are inclusive and foster a balance of guidance and autonomy. 
-        </p>
-    </div>
-
-    <header>
         <h2 class="hidden title">Noteworthy EXP </h2>
     </header>
 
-    <div class="jobsection">
+    <div class="block_section">
 
         <div class="jobs hidden">
             <a href="https://www.geaerospace.com/" target="blank"> <img class="joblogos jobedges" src="images/LogoGEAero.jpg" alt="GEAero Logo"></a>
@@ -76,37 +79,44 @@
     <header>
         <h2 class="hidden title">Writing Samples </h2>
     </header>
+    <div class="writing-samples">
+        <div>
+            <p><a href="https://underthegumtree.com/meet-the-author/jonny-blevins/" target="blank">
+            "Which Person She Is"</a>
+            <br> Magazine publication, flash fiction vignettes.
+            </p>
+                        
+            <p><a href="https://www.mounthorebmail.com/community/finding-dragon-spirit-blue-mounds" target="blank">
+            "Finding the Dragon Spirit in Blue Mounds"</a>
+            <br> News article about Aikido classes at the dojo with Kurt Lifka.
+            </p>
 
-    <div>
-        <p><a href="https://underthegumtree.com/meet-the-author/jonny-blevins/" target="blank">
-        "Which Person She Is"</a>
-        <br> Magazine publication, flash fiction vignettes.
-        </p>
-                    
-        <p><a href="https://www.mounthorebmail.com/community/finding-dragon-spirit-blue-mounds" target="blank">
-        "Finding the Dragon Spirit in Blue Mounds"</a>
-        <br> News article about Aikido classes at the dojo with Kurt Lifka.
-        </p>
-
-        <p><a href="http://alligatorsmile.blogspot.com/" target="blank">
-        Personal Blog, Alligator Smile</a><br> I blog about coding, art, alligators, or whatever's on my mind.</p>
+            <p><a href="http://alligatorsmile.blogspot.com/" target="blank">
+            Personal Blog, Alligator Smile</a><br> I blog about coding, art, alligators, or whatever's on my mind.</p>
+        </div>
     </div>
 
     <header>
         <h2 class="hidden title">Certs</h2>
     </header>
-    <div>
-        <a href="https://www.credly.com/badges/65195c80-b866-4581-93f5-b240eb771d02/public_url" target="_blank">
-        <img src="images/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Certification">
-        </a>
-    </div> <br> <br>
+    <div class="block_section">
+        <div>
+            <a href="https://www.credly.com/badges/65195c80-b866-4581-93f5-b240eb771d02/public_url" target="_blank">
+            <img src="images/aws-certified-cloud-practitioner.png" alt="AWS Certified Cloud Practitioner Certification">
+            </a>
+        </div> <br> <br>
+        <div>
+            <a href="https://www.coursera.org/account/accomplishments/verify/55VPQRKR2CJ5" target="_blank">
+            <img src="images/MetaCert.png" alt="Meta Introduction to FEWD Certification">
+            </a>
+        </div> <br> <br>
+    </div>
 
     <header>
         <h2 class="hidden title">Education</h2>
     </header>
 
-    <div class="schoolsection">
-    
+    <div class="block_section">
         <div class="schools hidden">
             <a href="https://cancode.org/" target="blank"> <img class="schoollogos schooledges" src="images/LogoCanCodeCommunities.png" alt="CanCode Logo"></a>
             <br>
@@ -144,41 +154,47 @@
         <h2 class="hidden title">Projects</h2>
     </header>
 
-    <div class="schoolsection">
+    <div class="block_section">
 
-        <div class="schools hidden">
+        <div class="hidden">
             <a href="https://github.com/orgs/BreakingPlaid/repositories" target="blank"> <img class="schoollogos schooledges" src="images/ProjectBreakingPlaid.png" alt="Breaking Plaid"></a>
             <br>
             GitHub Group "Breaking Plaid"<br>
-            SQL Group Projects</div><br> <br>
-        </div>
+            AI and SQL Group Projects</div><br> <br>
+
+
+        <div class="hidden">
+            <a href="https://breakingplaidpdfconverter.streamlit.app/" target="blank"> <img class="schoollogos schooledges" src="images/ProjectPDFCoverter.png" alt="BP PDFConverter"></a>
+            <br>
+            "PDF to DOCX Converter"<br>
+            Libraries: Streamlit, Fitz (PyMuPDF), python-docx</div><br> <br>
     
         <div class="schools hidden">
             <a href="https://github.com/jonnyblevins/PixelPromoters" target="blank"> <img class="schoollogos schooledges" src="images/ProjectPixelPromoters.png" alt="Pixel Promoters"></a>
             <br>
             SQL/ETL "Pixel Promoters"<br>
             MySQL, Talend, MS Power BI</div><br> <br>
-        </div>
 
         <div class="schools hidden">
             <a href="https://github.com/jonnyblevins/Data-Cleaning-Project-with-Pandas" target="blank"> <img class="schoollogos schooledges" src="images/ProjectPythonforData.png" alt="Pixel Promoters"></a>
             <br>
             Python "Data Cleaning and Analysis"<br>
             Libraries: Pandas, Matplotlib, Seaborn, Scikit-learn</div><br> <br>
-        </div>
 
+        <div class="schools hidden">
+            <a href="https://app.milanote.com/1RFU4W1Wf9FgbX/home" target="blank"> <img class="schoollogos schooledges" src="images/ProjectWWHHB.png" alt="Project WWHHB"></a>
+            <br>
+            "Witch Wants her Hat Back"<br>
+            Engine: Godot<br>
+            Art: Aseprite</div><br> <br>
+    </div>
+
+        <div><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
     <header>
-        <h2 class="hidden title">Links</h2>
-    </header>
-        
-        <div>
-        <a class="social-icon" href="https://linktr.ee/jonnyblevins" target="_blank"> 
-        <ion-icon name="logo-github"></ion-icon> Linktree
-        </a> </div><br>
-
-        <div><a class="social-icon" href="files/JRB Resume 2023.pdf" target="_blank"> 
-        <ion-icon name="id-card-outline"></ion-icon> Resume
-        </a> </div>
-
+        <h2 class="hidden title">
+            <a href="files/JRB_Resume.pdf" target="_blank">Resume</a>
+        </h2>
+    </header>    
+<p>© 2025 Jonny Blevins <br><br><br><br><br><br><br><br><br><br><br><br><br></p>
 </body>
 </html>

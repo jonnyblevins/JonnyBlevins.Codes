@@ -6,16 +6,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    font-family: 'Roboto Slab', cursive;
 }
 
 header, .title {
     text-align: center;
-    font-family: 'Handjet', cursive;
 }
 
 .title {
-    font-size: 40px;
+    font-size: 50px;
     color: #64B5F6;
 }
 
@@ -23,67 +22,44 @@ p, .smallertext {
     font-size: 16px;
     text-align: center;
     padding: 2%;
-    font-family: 'Handjet', cursive;
 }
 
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-50%);
-    transition: all 2s;
-}
-
-@media(prefers-reduced-motion) {
-    .show {
-        transition: none;
-    }
+    transition: opacity 2s, filter 2s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0);
-    transform: translateX(0);
+    transition: opacity 2s, filter 2s;
 }
 
-.jobsection, .schoolsection, .jobs, .schools {
-    font-family: 'Handjet', cursive;
+.block_section {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.jobs, .schools {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: 16px;
+    text-align: center;
 }
 
-.jobs img, .schools img {
+img {
     height: 120px;
     width: 120px;
     padding: 2%;
     border-radius: 15%;
-    object-fit: contain; 
+    object-fit: contain;
     background-color: #fff;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
-}
-
-.roundededges, .jobedges, .schooledges {
-    height: 15%;
-    width: 15%;
-    border-radius: 10%;
-    padding: 1em;
-    overflow: hidden;
-}
-
-.social-icon {
-    size: 20px;
-    color: #FFD54F;
-    display: block;
-    margin: 0 auto;
-    height: 40px;
-    width: 40px;
-    transition: color 0.4s;
-}
-
-.social-icon:hover {
-    color: #81C784;
 }
 
 a {
@@ -92,11 +68,11 @@ a {
 }
 
 a:visited {
-    color: #81D4FA;
+    color: #bbb249;
 }
 
 a:hover {
-    color: #FF8A65;
+    color: #81C784;
     transition: color 0.6s;
 }
 
@@ -113,19 +89,74 @@ a:active {
         font-size: 18px;
     }
 
-    .jobs img, .schools img {
+    img {
         height: 150px;
         width: 150px;
     }
+}
 
-    .roundededges, .jobedges, .schooledges {
-        height: 18%;
-        width: 18%;
-    }
+/* Container for the flip effect */
+.image-container {
+    width: 400px; /* Adjusted width */
+    height: 400px; /* Adjusted height */
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed positioning to stay on screen */
+    top: 50%; /* Vertically centered */
+    left: 20px; /* Positioned on the left side */
+    transform: translateY(-50%); /* Ensures it stays centered vertically */
+    z-index: 100; /* Keeps it on top */
+}
 
-    .social-icon {
-        size: 30px;
-        height: 60px;
-        width: 60px;
-    }
+/* The flip card */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+/* The actual flip effect */
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+/* Front and back of the card */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.image-container:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+/* Styling for the images */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
