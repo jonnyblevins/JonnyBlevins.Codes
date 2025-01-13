@@ -111,8 +111,8 @@ a:active {
 }
 
 .flip-card {
-    width: 300px;  /* Same as container */
-    height: 400px; /* Same as container */
+    width: 250px;  /* Same as container */
+    height: 0px; /* Same as container */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s ease;
@@ -155,4 +155,22 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* For mobile view */
+@media (max-width: 768px) {
+    .image-container {
+        position: absolute;
+        top: 20px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 250px; 
+        height: 350px;
+        z-index: 100;
+    }
+
+    .flip-card {
+        width: 250px;
+        height: 350px;
+    }
 }
