@@ -24,6 +24,12 @@ p, .smallertext {
     padding: 2%;
 }
 
+.subtitle {
+    font-size: 30px;
+    text-align: center;
+    color: #42bfc8
+}
+
 .hidden {
     opacity: 0;
     filter: blur(5px);
