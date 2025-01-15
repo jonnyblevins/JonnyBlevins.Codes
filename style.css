@@ -66,7 +66,11 @@ img {
     object-fit: contain;
     background-color: #fff;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 a {
     color: #42bfc8;
@@ -87,24 +91,17 @@ a:active {
 }
 
 @media (min-width: 768px) {
-    .title {
-        font-size: 60px;
-    }
-
-    p, .smallertext {
-        font-size: 18px;
-    }
-
-    img {
+    .jobs img, .schools img {
         height: 150px;
         width: 150px;
     }
 }
 
 
+/* Container for the rotating card */
 .image-container {
-    width: 300px;  /* Set a fixed width */
-    height: 400px; /* Set a fixed height */
+    width: 300px;   /* Set the fixed width of the image container */
+    height: 400px;  /* Set the fixed height of the image container */
     perspective: 1000px;
     display: flex;
     justify-content: center;
@@ -116,14 +113,16 @@ a:active {
     z-index: 100;
 }
 
+/* The rotating card itself */
 .flip-card {
-    width: 250px;  /* Same as container */
-    height: 0px; /* Same as container */
+    width: 300px;  /* Set the width of the flip card */
+    height: 400px; /* Set the height of the flip card */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 1s ease;
 }
 
+/* Inner part of the flip card */
 .flip-card-inner {
     position: absolute;
     width: 100%;
@@ -132,6 +131,7 @@ a:active {
     transition: transform 1s ease;
 }
 
+/* Front and back sides of the flip card */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
@@ -154,23 +154,25 @@ a:active {
     transform: rotateY(180deg);
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+/* Styling the images within the rotating card */
+.flip-card-front img, .flip-card-back img {
+    width: 100%;  /* Ensure image fills the flip card */
+    height: 100%; /* Ensure image fills the flip card */
+    object-fit: cover;  /* Maintain aspect ratio without distortion */
     border-radius: 0.5rem;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* For mobile view */
+/* Mobile view */
 @media (max-width: 768px) {
     .image-container {
         position: absolute;
-        top: 20px; 
+        top: 20px;
         left: 50%;
         transform: translateX(-50%);
-        width: 250px; 
+        width: 250px;
         height: 350px;
         z-index: 100;
     }
