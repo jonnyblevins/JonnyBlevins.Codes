@@ -1,0 +1,186 @@
+body {
+    background-color: #121212;
+    color: #E0E0E0;
+    font-size: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto Slab', cursive;
+}
+
+header, .title {
+    text-align: center;
+}
+
+.title {
+    font-size: 50px;
+    color: #42bfc8;
+}
+
+p, .smallertext {
+    font-size: 16px;
+    text-align: center;
+    padding: 2%;
+}
+
+.subtitle {
+    font-size: 30px;
+    text-align: center;
+    color: #42bfc8
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 2s, filter 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transition: opacity 2s, filter 2s;
+}
+
+.block_section {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.jobs, .schools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+    padding: 2%;
+    border-radius: 15%;
+    object-fit: contain;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+a {
+    color: #42bfc8;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #bbb249;
+}
+
+a:hover {
+    color: #81C784;
+    transition: color 0.6s;
+}
+
+a:active {
+    color: #BA68C8;
+}
+
+@media (min-width: 768px) {
+    .jobs img, .schools img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+
+.image-container {
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.flip-card {
+    width: 300px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+
+.flip-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.image-container:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img, .flip-card-back img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobile view, PIC TOO BIG LOL */
+@media (max-width: 768px) {
+    .image-container {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 280px;
+        z-index: 100;
+    }
+
+    .flip-card {
+        width: 200px;
+        height: 280px;
+    }
+
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
